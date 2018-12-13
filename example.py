@@ -79,14 +79,14 @@ if __name__ == '__main__':
         obj_id=obj_id,
         alter_set={"occupation": "Startup-er"}
     )
-    print("Modified {} object(s) with dataset: {}".format(len(obj_data_modified), obj_data_modified))
+    print("Modified object with dataset: {}".format(obj_data_modified))
 
     # Update single object by query
     obj_data_modified_ = mdbm.update(
         filter_set={"occupation": "Startup-er"},
         alter_set={"occupation": "Unemployed"}
     )
-    print("Modified {} object(s) with dataset: {}".format(len(obj_data_modified_), obj_data_modified_))
+    print("Modified object with dataset: {}".format(obj_data_modified_))
 
     # Update few objects by query
     obj_count_modified = mdbm.update_bulk(
