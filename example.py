@@ -72,7 +72,7 @@ if __name__ == '__main__':
     print("Found {} (with limitation to {}) objects: {}".format(len(obj_list), limitation, obj_list))
 
     obj_count = mdbm.filter(filter_query, count_only=True)
-    print("Total count of matched objects:".format(obj_count))
+    print("Total count of matched objects: {}".format(obj_count))
 
     # Update single object by id
     obj_data_modified = mdbm.update_by_id(
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 
     # Delete objects
     obj_count_deleted = mdbm.delete(filter_set=filter_query_modified)
-    print("Delete {} object(s).".format(obj_count_modified, obj_list))
+    print("Deleted {} object(s).".format(obj_count_modified, obj_list))
 
     # Count objects
     amount = mdbm.count(filter_set={"nickname": "Aquaman"})
